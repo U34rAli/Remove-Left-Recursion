@@ -1,0 +1,3 @@
+S->SpA|A
+A->BmA|B|Aa|Ab
+B->a|b|c|lsr
