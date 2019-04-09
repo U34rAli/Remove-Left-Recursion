@@ -49,7 +49,7 @@ public class ReadFile {
             LinkedList<LinkedList<String>> indLeftRecursion = new LinkedList<LinkedList<String>>();
             for (int i = 0; i < li.size(); i++) {
                 String nTer = li.get(i).get(0);
-                System.out.println("\nNT " + nTer);
+                // System.out.println("\nNT " + nTer);
                 for (int j = 1; j < li.get(i).size(); j++) {
                     String prod = li.get(i).get(j);
                     String pattern = "^" + nTer;
@@ -60,7 +60,7 @@ public class ReadFile {
                         char leftNonTerminal = prod.charAt(0);
                         if (isUpperCase(leftNonTerminal + "")) {
                             int index = getNonTerminalIndex(leftNonTerminal + "", li);
-                            System.out.println(leftNonTerminal + "-" + index);
+                            // System.out.println(leftNonTerminal + "-" + index);
                             int k = index;
                             if (!(index < i)) {
 
@@ -74,7 +74,7 @@ public class ReadFile {
                                             if (isUpperCase(leftNonTerminal + "")) {
                                                 k = index;
                                                 index = getNonTerminalIndex(leftNonTerminal + "", li);
-                                                System.out.println(leftNonTerminal + " " + index);
+                                                // System.out.println(leftNonTerminal + " " + index);
                                                 break;
                                             }
                                         }
@@ -82,19 +82,19 @@ public class ReadFile {
                                         else {
                                             // System.out.println(leftNonTerminal + " hell " + index);
                                             li.get(index).remove(l);
-                                            System.out.println("--- ");
+                                            // System.out.println("--- ");
                                             for (int ll = 1; ll < li.get(i).size(); ll++) {
                                                 String pp = li.get(i).get(ll);
-                                                System.out.print(pp + "" + nRemoveLeft[1] + ", ");
+                                                // System.out.print(pp + "" + nRemoveLeft[1] + ", ");
                                                 li.get(index).add(pp + "" + nRemoveLeft[1]);
                                             }
-                                            System.out.println("\n--- ");
+                                            // System.out.println("\n--- ");
                                             index = li.size();
                                             break;
                                         }
                                     }
                                     if ((index == li.size()) || index < k) {
-                                        System.out.println("----------------");
+                                        // System.out.println("----------------");
                                         break;
                                     }
                                 }
@@ -108,9 +108,9 @@ public class ReadFile {
                 }
             }
 
-            System.out.println("--------Indirect Left Recursion-----------");
+            System.out.println("\n--------Indirect Left Recursion-----------");
             System.out.println(li);
-            System.out.println("-------------------");
+            System.out.println("\n--------Direct Left Recursion-----------");
 
             /* Time to find LeftRecursion if exist in any production */
             // This list is same as parent list of all production but removed Left Recursion
