@@ -1,3 +1,3 @@
-S->SpA|A
-A->BmA|B|Aa|Ab
-B->a|b|c|lsr
+A->BC
+B->CA|b
+C->AA|a|A
