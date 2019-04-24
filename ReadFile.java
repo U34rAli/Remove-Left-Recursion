@@ -75,7 +75,7 @@ public class ReadFile {
                                                 k = index;
                                                 index = getNonTerminalIndex(leftNonTerminal + "", li);
                                                 // System.out.println(leftNonTerminal + " " + index);
-                                                break;
+                                                // break;
                                             }
                                         }
                                         // TODO non terminal found
@@ -180,7 +180,7 @@ public class ReadFile {
                     for (int j = 0; j < alpha.size(); j++) {
                         rAp.add(alpha.get(j) + nTer + prime);
                     }
-                    rAp.add("epsilon");
+                    rAp.add("#");
                     leftRecursion.add(rSimple);
                     leftRecursion.add(rAp);
                 } else {

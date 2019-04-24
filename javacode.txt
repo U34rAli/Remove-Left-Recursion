@@ -1,3 +1,3 @@
 A->BC
 B->CA|b
-C->AA|a|A
+C->AA|a
